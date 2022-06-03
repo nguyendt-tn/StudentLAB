@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+}
+.text-red{
+    color: #ff0000;
+}
+.main{
+    max-width: 500px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 50px;
+    border: 1px solid #777777;
+    box-shadow: 5px 5px 5px #888888;;
+}
+.shadow-1{
+    text-shadow: 2px 2px 2px #777777;
+}
+.shadow-2{
+    text-shadow: 8px 2px 2px #777777;
+}
+.shadow-3{
+    text-shadow: 12px 8px 2px #777777;
+}
+.shadow-4{
+    text-shadow: 14px 10px 2px #777777;
+}

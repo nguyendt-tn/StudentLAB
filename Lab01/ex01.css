@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+}
+.text-red{
+    color: #ff0000;
+}
+.main{
+    max-width: 500px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 50px;
+    background-color: #eeffff;
+    border: 1px solid #777777;
+    box-shadow: 5px 5px 5px #888888;;
+}

@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+}
+.signup{
+    max-width: 450px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: #222536;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.signup-header{
+    width: calc(100% - 20px);
+    padding: 10px;
+    background-color: #de8704;
+    color: #d2c413;
+}
+.signup-content{
+    width: calc(100% - 20px);
+    padding: 10px;
+    color: #c6b736;
+}
+.form-group{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.form-left{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.form-right{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.form-right select{
+    margin-right: 10px;
+}
+.form-right label{
+    margin-right: 10px;
+}
+.signup-footer{
+    width: calc(100% - 20px);
+    display: flex;
+    justify-content: flex-end;
+    gap: 0 20px;
+    padding: 10px;
+    background-color: #de8704;
+}
+.btn{
+    text-decoration: none;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 15px;
+}
+.btn--submit{
+    background-color: #62af5e;
+}
+.btn--cancel{
+    background-color: #d9544f;
+}

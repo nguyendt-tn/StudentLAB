@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+}
+.main{
+    max-width: 700px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: #ffffff;
+    border: 3px solid #777777;
+    border-right: 3px solid #333333;
+    border-bottom: 3px solid #333333;
+    padding: 5px;
+}
+.form-name{
+    width: 100%;
+    background-color: #ffffaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #777777;
+    padding: 5px 0;
+}
+.form-name h2{
+    font-size: 25px;
+    color: red;
+}
+.form-group{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+input{
+    padding: 0;
+}
+.form-left{
+    width: 30%;
+    height: 20px;
+    background-color: #00ccff;
+    padding: 5px 0 5px 20px;
+    border: 1px solid #777777;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.form-right{
+    width: 62.8%;
+    height: 20px;
+    background-color: #00ccff;
+    padding: 5px 0 5px 20px;
+    border: 1px solid #777777;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.form-right input{
+    background-color: #ccffcc;
+    width: 95%;
+}
+.form-right textarea{
+    background-color: #ccffcc;
+    width: 95%;
+    height: 90%;
+}
+.form--address{
+    height: 60px;
+}
+.form--game{
+    height: 90px;
+}
+.from--game--list{
+    flex-direction: column;
+}
+.list-item {
+    width: 100%;
+    display: flex;
+}
+.list-item label{
+    width: 25%;
+}
+.list-item input{
+    width: 15%;
+}
+.list-gender{
+    width: 25%;
+}
+.list-gender label{
+    width: 25%;
+}
+.list-gender input{
+    width: 15%;
+}
+.form-right .select-age{ 
+    width: 100%;
+}
+.form-right select{
+    background-color: #ccffcc;
+    width: 95%;
+}
+.form--file{
+    width: 97%;
+    justify-content: center;
+    background-color: #00ccff;
+    padding: 5px 0 5px 20px;
+    border: 1px solid #777777;
+}
+.form-input{
+    width: 50%;
+}
+.form-input input{
+    background-color: #ccffcc;
+}
+.form--submit{
+    width: 97%;
+    justify-content: center;
+    background-color: #00ccff;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #777777;
+    gap: 0 20px;
+}
+.form--submit a{
+    text-decoration: none;
+    display: block;
+    width: 30%;
+    color: black;
+    background-color: #ccffcc;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #777777;
+}

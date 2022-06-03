@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+}
+.main{
+    max-width: 500px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 50px;
+    background-color: #fffff8;
+    border: 1px solid #777777;
+    box-shadow: 5px 5px 5px #888888;;
+}
+.title{
+    color: #a13d2c;
+}
+.author{
+    color: #9ebc69;
+    font-style: italic;
+    font-weight: 600;
+}

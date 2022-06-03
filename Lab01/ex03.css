@@ -1,0 +1,27 @@
+.style1{
+	border: 0.5px;
+	border-style:solid;
+	height: 420px;
+	width: 465px;
+	margin:auto;
+	background:#e5ebdf;
+	padding-top: 0px;
+	padding-right: 8px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	box-shadow: 5px 5px #bababa;
+	font-family: serif;
+}
+.style2{
+	background-color:#7c8b9b;
+	font-size: 30px;
+	color: #f5fafd;
+	font-weight: bold;
+}
+.style3{
+	color: #8B6914;
+}
+.style4{
+	line-height: 2;
+	font-size:18px;
+}
