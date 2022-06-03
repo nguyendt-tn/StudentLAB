@@ -40,6 +40,9 @@ namespace Lab04.Controllers
         // GET: Instructor/Create
         public ActionResult Create()
         {
+            var instructor = new Instructor();
+            instructor.CourseAssignments = new List<CourseAssignment>();
+            PopulateAssignedCourseData(instructor);
             return View();
         }
 
@@ -48,8 +51,17 @@ namespace Lab04.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,LastName,FirstMidName,HireDate,Office")] Instructor instructor)
+        public ActionResult Create([Bind(Include = "ID,LastName,FirstMidName,HireDate,Office")] Instructor instructor, string[] selectedCourses)
         {
+            if (selectedCourses != null)
+            {
+                instructor.CourseAssignments = new List<CourseAssignment>();
+                foreach (var course in selectedCourses)
+                {
+                    var courseToAdd = new CourseAssignment { InstructorID = instructor.ID, CourseID = int.Parse(course) };
+                    instructor.CourseAssignments.Add(courseToAdd);
+                }
+            }
             if (ModelState.IsValid)
             {
                 db.Instructors.Add(instructor);
@@ -109,31 +121,31 @@ namespace Lab04.Controllers
             }
             return View(instructor);
         }
-        private void UpdateInstructorCourses(string[] selectedCourses, Instructor instructorToUpdate)
+        private void UpdateInstructorCourses(string[] selectedCourses, Instructor instructor)
         {
             if (selectedCourses == null)
             {
-                instructorToUpdate.CourseAssignments = new List<CourseAssignment>();
+                instructor.CourseAssignments = new List<CourseAssignment>();
                 return;
             }
 
             var selectedCoursesHS = new HashSet<string>(selectedCourses);
-            var instructorCourses = new HashSet<int>(instructorToUpdate.CourseAssignments.Select(c => c.CourseID));
+            var instructorCourses = new HashSet<int>(instructor.CourseAssignments.Select(c => c.CourseID));
             foreach (var course in db.Courses)
             {
                 if (selectedCoursesHS.Contains(course.CourseID.ToString()))
                 {
                     if (!instructorCourses.Contains(course.CourseID))
                     {
-                        var newCourse = new CourseAssignment { CourseID = course.CourseID, InstructorID = instructorToUpdate.ID };
-                        instructorToUpdate.CourseAssignments.Add(newCourse);
+                        var newCourse = new CourseAssignment { CourseID = course.CourseID, InstructorID = instructor.ID };
+                        instructor.CourseAssignments.Add(newCourse);
                     }
                 }
                 else
                 {
                     if (instructorCourses.Contains(course.CourseID))
                     {
-                        CourseAssignment courseToRemove = instructorToUpdate.CourseAssignments.FirstOrDefault(i => i.CourseID == course.CourseID);
+                        CourseAssignment courseToRemove = instructor.CourseAssignments.FirstOrDefault(i => i.CourseID == course.CourseID);
                         db.CourseAssignments.Remove(courseToRemove);
                     }
                 }
