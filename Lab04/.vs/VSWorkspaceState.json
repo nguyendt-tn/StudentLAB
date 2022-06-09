@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Lab04",
     "\\Lab04\\Views",
     "\\Lab04\\Views\\Instructor"
   ],
-  "SelectedNode": "\\Lab04.sln",
+  "SelectedNode": "\\Lab04\\Views\\Instructor\\Create.cshtml",
   "PreviewInSolutionExplorer": false
 }

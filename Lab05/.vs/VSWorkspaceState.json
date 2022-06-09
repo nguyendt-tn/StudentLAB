@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Lab04",
-    "\\Lab04\\Controllers"
+    "\\Lab04\\Controllers",
+    "\\Lab04\\Views",
+    "\\Lab04\\Views\\Instructor",
+    "\\Lab04\\Views\\Student"
   ],
-  "SelectedNode": "\\Lab04\\Controllers\\InstructorController.cs",
+  "SelectedNode": "\\Lab04\\Views\\Instructor\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }
